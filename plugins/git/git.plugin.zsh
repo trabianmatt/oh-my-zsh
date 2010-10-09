@@ -49,6 +49,8 @@ compdef _git glgg=git-log
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
 compdef git-svn-dcommit-push=git
 
+alias gsr='git svn rebase'
+alias gsd='git svn dcommit'
 #
 # Will return the current branch name
 # Usage example: git pull origin $(current_branch)
@@ -62,4 +64,13 @@ function current_branch() {
 alias ggpull='git pull origin $(current_branch)'
 compdef ggpull=git
 alias ggpush='git push origin $(current_branch)'
+<<<<<<< HEAD
 compdef ggpush=git
+<<<<<<< HEAD
+=======
+alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+compdef ggpnp=git
+=======
+alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+>>>>>>> e5e032f... adding git svn aliases
+>>>>>>> adding git svn aliases
