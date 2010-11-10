@@ -1,8 +1,8 @@
 # Aliases
-alias g='git'
-compdef g=git
 alias gst='git status'
 compdef _git gst=git-status
+alias g='git status'
+compdef _git g=git-status
 alias gl='git pull'
 compdef _git gl=git-pull
 alias gup='git fetch && git rebase'
@@ -28,6 +28,17 @@ compdef _git gcp=git-cherry-pick
 alias glg='git log --stat --max-count=5'
 compdef _git glg=git-log
 alias gadd="git add -u && git add . && git status"
+
+# Allow free-form entry of a commit message
+function gg() {
+  git commit -v -a -m "$*"
+}
+
+# Track and checkout a remote branch
+function gbt() {
+  git branch --track $2 $1/$2
+  git checkout $2
+}
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
