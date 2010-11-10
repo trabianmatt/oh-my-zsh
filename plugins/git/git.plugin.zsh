@@ -27,6 +27,7 @@ alias gcp='git cherry-pick'
 compdef _git gcp=git-cherry-pick
 alias glg='git log --stat --max-count=5'
 compdef _git glg=git-log
+alias gadd="git add -u && git add . && git status"
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
@@ -46,5 +47,3 @@ alias ggpull='git pull origin $(current_branch)'
 compdef ggpull=git
 alias ggpush='git push origin $(current_branch)'
 compdef ggpush=git
-alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
-compdef ggpnp=git
