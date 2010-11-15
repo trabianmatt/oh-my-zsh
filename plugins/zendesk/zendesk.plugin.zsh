@@ -22,6 +22,12 @@ update_motd() {
   `cat ~/.zendesk-tickets >> /etc/motd`
 }
 
+kill_current_ticket() {
+  `sed 1d ~/.zendesk-tickets > ~/.zendesk-tickets-tmp`
+  `mv ~/.zendesk-tickets{-tmp,}`
+  update_motd
+}
+
 peek_ticket() {
 
   ticket=$(head -1 ~/.zendesk-tickets)
@@ -33,8 +39,7 @@ peek_ticket() {
 
 pop_ticket() {
   peek_ticket
-  `sed 1d ~/.zendesk-tickets > ~/.zendesk-tickets-tmp`
-  `mv ~/.zendesk-tickets{-tmp,}`
+  kill_current_ticket
   update_motd
 }
 
@@ -42,5 +47,13 @@ alias zo='open_zendesk_ticket'
 alias ticket='open_zendesk_ticket'
 
 alias pusht='push_ticket'
+alias tpush='push_ticket'
+
 alias peekt='peek_ticket'
+alias tpeek='peek_ticket'
+
 alias popt='pop_ticket'
+alias tpop='pop_ticket'
+
+alias killt='kill_current_ticket'
+alias tkill='kill_current_ticket'
