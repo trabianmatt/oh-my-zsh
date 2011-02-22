@@ -4,3 +4,6 @@ unsetopt auto_name_dirs
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+fpath=($ZSH/plugins/rvm $fpath)
+autoload -U compinit
+compinit -i
