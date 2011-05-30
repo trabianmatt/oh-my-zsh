@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Prevents ~rvm_rvmrc_cwd from showing in the prompt
 # http://rvm.beginrescueend.com/integration/zsh/
 unsetopt auto_name_dirs
@@ -7,6 +8,10 @@ unsetopt auto_name_dirs
 fpath=($ZSH/plugins/rvm $fpath)
 autoload -U compinit
 compinit -i
+=======
+# What does this really do?
+# fpath=($ZSH/plugins/rvm $fpath)
+>>>>>>> Rollback of Pull #366
 
 alias rubies='rvm list rubies'
 alias gemsets='rvm gemset list'
@@ -39,10 +44,6 @@ compdef _rb19 rb19
 function rvm-update {
 	rvm get head
 	rvm reload # TODO: Reload rvm completion?
-}
-
-function rvm-link-completion {
-	ln -s "$rvm_path/scripts/zsh/Completion/_rvm" "$ZSH/plugins/rvm/_rvm.official"
 }
 
 # TODO: Make this usable w/o rvm.
