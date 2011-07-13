@@ -4,6 +4,7 @@ compinit -i
 
 alias be="bundle exec"
 alias bi="bundle install"
+alias bl="bundle list"
 alias bu="bundle update"
 
 # The following is based on https://github.com/gma/bundler-exec
