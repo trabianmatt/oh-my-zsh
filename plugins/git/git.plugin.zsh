@@ -44,6 +44,8 @@ function gbt() {
 alias glgg='git log --graph --max-count=5'
 
 compdef _git glgg=git-log
+alias gss='git status -s'
+compdef _git gss=git-status
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
