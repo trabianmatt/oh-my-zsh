@@ -73,3 +73,11 @@ else
     fi
   fi
 fi
+
+# Check for updates on initial load...
+# if [ "$DISABLE_AUTO_UPDATE" = "true" ]
+# then
+#   return
+# else
+#   /usr/bin/env zsh $ZSH/tools/check_for_upgrade.sh
+# fi
