@@ -1,9 +1,6 @@
 # Aliases
-<<<<<<< HEAD
-=======
 alias g='git status'
 compdef _git g=git-status
->>>>>>> bb10d08e53f0a2b9e0e44cab6d09b952c4aa8443
 alias gst='git status'
 compdef _git gst=git-status
 alias g='git status'
