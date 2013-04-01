@@ -1,3 +1,9 @@
+# Prevents ~rvm_rvmrc_cwd from showing in the prompt
+# http://rvm.beginrescueend.com/integration/zsh/
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+unsetopt auto_name_dirs
+
 alias rubies='rvm list rubies'
 alias gemsets='rvm gemset list'
 
