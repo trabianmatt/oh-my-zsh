@@ -22,4 +22,12 @@ alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
 
+alias hfcut='ssh -l root -L 7800:209.184.80.33:22 70.85.82.36 -N &'
+alias hfcu='ssh -p 7800 hfcu'
 alias x=extract
+
+# fuego1.sffirecu.org
+alias fuego='ssh -l root -L 3010:63.80.75.80:443 70.85.82.36 -N &'
+alias fuego_joe='ssh -l root -L 3011:70.88.43.188:80 70.85.82.36 -N &'
+
+alias tmux="TERM=screen-256color-bce tmux"

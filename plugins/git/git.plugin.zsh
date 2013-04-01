@@ -1,4 +1,9 @@
 # Aliases
+<<<<<<< HEAD
+=======
+alias g='git status'
+compdef _git g=git-status
+>>>>>>> bb10d08e53f0a2b9e0e44cab6d09b952c4aa8443
 alias gst='git status'
 compdef _git gst=git-status
 alias g='git status'
@@ -28,6 +33,29 @@ alias gcp='git cherry-pick'
 compdef _git gcp=git-cherry-pick
 alias glg='git log --stat --max-count=5'
 compdef _git glg=git-log
+alias glgg='git log --graph --max-count=5'
+compdef _git glgg=git-log
+alias gss='git status -s'
+compdef _git gss=git-status
+alias ga='git add'
+compdef _git ga=git-add
+alias gm='git merge'
+compdef _git gm=git-merge
+alias grh='git reset HEAD'
+alias grhh='git reset HEAD --hard'
+
+alias gadd="git add -u && git add . && git status"
+
+# Allow free-form entry of a commit message
+function gg() {
+  git commit -v -a -m "$*"
+}
+
+# Track and checkout a remote branch
+function gbt() {
+  git branch --track $2 $1/$2
+  git checkout $2
+}
 
 alias gadd="git add -u && git add . && git status"
 
